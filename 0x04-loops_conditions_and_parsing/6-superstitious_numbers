@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+# Initialize a counter variable
+counter=1
+
+# Using a while loop to display numbers from 1 to 20
+while [ $counter -le 20 ]
+do
+    # Check if the current number matches any special cases
+    case $counter in
+        4)
+            echo "4"
+            echo "Bad luck from China"
+            ;;
+        9)
+            echo "9"
+            echo "Bad luck from Japan"
+            ;;
+        17)
+            echo "17"
+            echo "Bad luck from Italy"
+            ;;
+        *)
+            echo $counter
+            ;;
+    esac
+
+    # Increment the counter
+    ((counter++))
+done
