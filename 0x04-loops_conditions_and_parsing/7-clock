@@ -1,12 +1,18 @@
 #!/usr/bin/env bash
 # Loop for 12 hours
-for ((hour=0; hour<=12; hour++))
+hour=0
+minute=1
+
+while [ $hour -le 12 ]
 do
     echo "Hour: $hour"
-
+    
+    minute=1
     # Loop for 59 minutes
-    for ((minute=1; minute<=59; minute++))
+    while [ $minute -le 59 ]
     do
         echo "$minute"
+	((minute++))
     done
+    ((hour++))
 done
