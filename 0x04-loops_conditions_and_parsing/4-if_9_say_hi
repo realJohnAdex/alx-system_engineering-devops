@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# Initialize a counter variable
+counter=0
+
+# Using a while loop to display "Best School" 10 times
+# Say "Hi" if it is 9
+while [ $counter -lt 10 ]
+do
+    echo "Best School"
+    if [ $counter -eq 8 ]
+    then
+	    echo "Hi"
+    fi
+    # Increment the counter
+    ((counter++))
+done
