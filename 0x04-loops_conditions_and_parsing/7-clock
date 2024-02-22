@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# Loop for 12 hours
+for ((hour=0; hour<=12; hour++))
+do
+    echo "Hour: $hour"
+
+    # Loop for 59 minutes
+    for ((minute=1; minute<=59; minute++))
+    do
+        echo "$minute"
+    done
+done
