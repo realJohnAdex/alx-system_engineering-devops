@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-
 # Loop through each file in the current directory
 for file in *
 do
