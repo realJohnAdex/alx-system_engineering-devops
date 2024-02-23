@@ -1,0 +1,35 @@
+#!/usr/bin/env bash
+# Function to handle SIGTERM and SIGQUIT signals
+terminate_handler() {
+    echo "Deleting PID file and terminating script..."
+    rm -f "/var/run/myscript.pid"
+    exit 0
+}
+
+# Function to handle SIGTERM signal
+sigterm_handler() {
+    kill "$pid" && echo "I hate the kill command"
+}
+
+# Function to handle SIGINT signal
+sigint_handler() {
+    echo "Y U no love me?!"
+}
+
+# Trap SIGTERM, SIGQUIT, and SIGINT signals and call the respective handler functions
+trap terminate_handler SIGTERM SIGQUIT
+trap sigterm_handler SIGTERM
+trap sigint_handler SIGINT
+
+# Get the PID of the current process
+pid=$$
+
+# Write the PID to the PID file
+echo "$pid" > /var/run/myscript.pid
+
+# Infinite loop displaying "To infinity and beyond"
+while true; do
+    echo "To infinity and beyond"
+    sleep 1
+done
+
