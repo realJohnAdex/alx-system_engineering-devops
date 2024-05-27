@@ -1,3 +1,4 @@
+# creating a file that contain I love puppet
 file { '/tmp/school':
     ensure  => file,
     mode    => '0744',
