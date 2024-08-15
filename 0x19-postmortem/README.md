@@ -1,5 +1,5 @@
 # Postmortem: Web Application Outage
-![postmortem](https://images.unsplash.com/photo-1612537784037-898eb4583c35?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)
+
 ## Issue Summary
 
 - **Duration of the Outage:** August 10, 2024, 14:00 - 16:30 UTC
